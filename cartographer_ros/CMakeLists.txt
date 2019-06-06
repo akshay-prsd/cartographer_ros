@@ -194,3 +194,11 @@ foreach(HDR ${HDRS})
       include/${INSTALL_DIR}
   )
 endforeach()
+add_definitions(-std=c++11)
+add_executable(extract_trajectory cartographer_ros/extract_trajectories.cpp)
+target_link_libraries(extract_trajectory ${catkin_LIBRARIES} ${PROJECT_NAME})
+install(TARGETS extract_trajectory
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
+)

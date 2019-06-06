@@ -270,11 +270,13 @@ void Node::PublishLocalTrajectoryData(const ::ros::TimerEvent& timer_event) {
 
         tf_broadcaster_.sendTransform(stamped_transforms);
       } else {
-        stamped_transform.header.frame_id = node_options_.map_frame;
-        stamped_transform.child_frame_id =
-            trajectory_data.trajectory_options.published_frame;
-        stamped_transform.transform = ToGeometryMsgTransform(
-            tracking_to_map * (*trajectory_data.published_to_tracking));
+
+        // Changing the frame and child_frame_id so that base_link->map_cartographer frame is published.
+        // Changes made
+        stamped_transform.header.frame_id = trajectory_data.trajectory_options.published_frame;
+        stamped_transform.child_frame_id = node_options_.map_frame;
+        Rigid3d rigid_tf = (tracking_to_map * (*trajectory_data.published_to_tracking)).inverse();
+        stamped_transform.transform = ToGeometryMsgTransform(rigid_tf);
         tf_broadcaster_.sendTransform(stamped_transform);
       }
     }

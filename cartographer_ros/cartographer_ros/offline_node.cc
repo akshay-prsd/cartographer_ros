@@ -32,6 +32,7 @@
 #include "ros/callback_queue.h"
 #include "rosgraph_msgs/Clock.h"
 #include "tf2_ros/static_transform_broadcaster.h"
+#include "cartographer/transform/transform.h"
 #include "urdf/model.h"
 
 DEFINE_bool(collect_metrics, false,
@@ -94,6 +95,8 @@ void RunOfflineNode(const MapBuilderFactory& map_builder_factory) {
   const std::vector<std::string> configuration_basenames =
       absl::StrSplit(FLAGS_configuration_basenames, ',', absl::SkipEmpty());
   std::vector<TrajectoryOptions> bag_trajectory_options(1);
+  // Add a vector to store intial trajectory pose
+  std::vector<::cartographer::mapping::proto::InitialTrajectoryPose> initial_trajectory_pose;
   std::tie(node_options, bag_trajectory_options.at(0)) =
       LoadOptions(FLAGS_configuration_directory, configuration_basenames.at(0));
 
@@ -263,6 +266,7 @@ void RunOfflineNode(const MapBuilderFactory& map_builder_factory) {
   }
 
   std::unordered_map<int, int> bag_index_to_trajectory_id;
+  int prev_trajectory_id = -1;
   const ros::Time begin_time =
       // If no bags were loaded, we cannot peek the time of first message.
       playable_bag_multiplexer.IsMessageAvailable()
@@ -286,9 +290,18 @@ void RunOfflineNode(const MapBuilderFactory& map_builder_factory) {
     // Lazily add trajectories only when the first message arrives in order
     // to avoid blocking the sensor queue.
     if (bag_index_to_trajectory_id.count(bag_index) == 0) {
+      TrajectoryOptions options = bag_trajectory_options.at(bag_index);
+      if(prev_trajectory_id > -1) {
+        
+        ::cartographer::mapping::proto::InitialTrajectoryPose initial_pose;
+        initial_pose.set_to_trajectory_id(prev_trajectory_id);
+        *initial_pose.mutable_relative_pose() = ::cartographer::transform::ToProto(::cartographer::transform::Rigid3d::Identity());
+        initial_pose.set_timestamp(cartographer::common::ToUniversal(FromRos(ros::Time::now())));
+        *options.trajectory_builder_options.mutable_initial_trajectory_pose() = initial_pose;
+      }
       trajectory_id =
           node.AddOfflineTrajectory(bag_expected_sensor_ids.at(bag_index),
-                                    bag_trajectory_options.at(bag_index));
+                                    options);
       CHECK(bag_index_to_trajectory_id
                 .emplace(std::piecewise_construct,
                          std::forward_as_tuple(bag_index),
@@ -296,6 +309,8 @@ void RunOfflineNode(const MapBuilderFactory& map_builder_factory) {
                 .second);
       LOG(INFO) << "Assigned trajectory " << trajectory_id << " to bag "
                 << bag_filenames.at(bag_index);
+      prev_trajectory_id++;
+      std::cout << "increasing prev trajectory id " << prev_trajectory_id << std::endl;
     } else {
       trajectory_id = bag_index_to_trajectory_id.at(bag_index);
     }
