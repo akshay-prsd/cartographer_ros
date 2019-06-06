@@ -133,7 +133,8 @@ int MapBuilderBridge::AddTrajectory(
                      InsertionResult>) {
         OnLocalSlamResult(trajectory_id, time, local_pose, range_data_in_local);
       });
-  LOG(INFO) << "Added trajectory with ID '" << trajectory_id << "'.";
+
+  LOG(INFO) << "Added trajectory with ID in map builder bridge '" << trajectory_id << "'.";
 
   // Make sure there is no trajectory with 'trajectory_id' yet.
   CHECK_EQ(sensor_bridges_.count(trajectory_id), 0);
@@ -145,6 +146,7 @@ int MapBuilderBridge::AddTrajectory(
   auto emplace_result =
       trajectory_options_.emplace(trajectory_id, trajectory_options);
   CHECK(emplace_result.second == true);
+  
   return trajectory_id;
 }
 
@@ -528,12 +530,18 @@ void MapBuilderBridge::OnLocalSlamResult(
     const int trajectory_id, const ::cartographer::common::Time time,
     const Rigid3d local_pose,
     ::cartographer::sensor::RangeData range_data_in_local) {
+
+      // std::cout << "local_pose- x " << local_pose.translation().x() << " y " << local_pose.translation().y()
+      // << " w " << local_pose.rotation().w() << " x " << local_pose.rotation().x()
+      // << " y " << local_pose.rotation().y() << " z " << local_pose.rotation().z() << std::endl;
   std::shared_ptr<const LocalTrajectoryData::LocalSlamData> local_slam_data =
       std::make_shared<LocalTrajectoryData::LocalSlamData>(
           LocalTrajectoryData::LocalSlamData{time, local_pose,
                                              std::move(range_data_in_local)});
   absl::MutexLock lock(&mutex_);
   local_slam_data_[trajectory_id] = std::move(local_slam_data);
+  // std::cout << "trajectory id " << trajectory_id << std::endl;
+  // std::cout << " pointer " << local_slam_data_[trajectory_id] << std::endl;
 }
 
 }  // namespace cartographer_ros
