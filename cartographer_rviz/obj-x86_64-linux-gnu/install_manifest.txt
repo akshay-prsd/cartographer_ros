@@ -1,0 +1,10 @@
+/opt/ros/kinetic/lib/pkgconfig/cartographer_rviz.pc
+/opt/ros/kinetic/share/cartographer_rviz/cmake/cartographer_rvizConfig.cmake
+/opt/ros/kinetic/share/cartographer_rviz/cmake/cartographer_rvizConfig-version.cmake
+/opt/ros/kinetic/share/cartographer_rviz/package.xml
+/opt/ros/kinetic/lib/libcartographer_rviz.so
+/opt/ros/kinetic/share/cartographer_rviz/rviz_plugin_description.xml
+/opt/ros/kinetic/share/cartographer_rviz/ogre_media/materials/scripts/submap.material
+/opt/ros/kinetic/share/cartographer_rviz/ogre_media/materials/glsl120/submap.frag
+/opt/ros/kinetic/share/cartographer_rviz/ogre_media/materials/glsl120/glsl120.program
+/opt/ros/kinetic/share/cartographer_rviz/ogre_media/materials/glsl120/submap.vert

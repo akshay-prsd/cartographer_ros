@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/akshay/src/cartographer_ros/cartographer_rviz/obj-x86_64-linux-gnu/abseil/src/abseil/absl/debugging/leak_check.cc
+absl/debugging/leak_check.h
+/home/akshay/src/cartographer_ros/cartographer_rviz/obj-x86_64-linux-gnu/abseil/src/abseil/absl/debugging/absl/debugging/leak_check.h
+sanitizer/lsan_interface.h
+-
+
+/home/akshay/src/cartographer_ros/cartographer_rviz/obj-x86_64-linux-gnu/abseil/src/abseil/absl/debugging/leak_check.h
+cstddef
+-
+

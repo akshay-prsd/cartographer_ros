@@ -1,0 +1,11 @@
+2a4cc65ad7c0c98a8893d996acd182fd  opt/ros/kinetic/lib/libcartographer_rviz.so
+fb87cda69f51ee7591466c44fac930ee  opt/ros/kinetic/lib/pkgconfig/cartographer_rviz.pc
+f90af7ea98ad6bd094525fc5117d8364  opt/ros/kinetic/share/cartographer_rviz/cmake/cartographer_rvizConfig-version.cmake
+db18642431ea5d7397c0c33f5db45085  opt/ros/kinetic/share/cartographer_rviz/cmake/cartographer_rvizConfig.cmake
+45687ba77040c8d88307feab9269730a  opt/ros/kinetic/share/cartographer_rviz/ogre_media/materials/glsl120/glsl120.program
+a867e4dea9133849be2af5940a0cbefd  opt/ros/kinetic/share/cartographer_rviz/ogre_media/materials/glsl120/submap.frag
+b9cd37081b1c8812b54809bbe5f710f6  opt/ros/kinetic/share/cartographer_rviz/ogre_media/materials/glsl120/submap.vert
+491a9a70bf493d639237fe7a22984141  opt/ros/kinetic/share/cartographer_rviz/ogre_media/materials/scripts/submap.material
+068300c8c53c55fd2af9724e463609d3  opt/ros/kinetic/share/cartographer_rviz/package.xml
+7135f3b99557cac70e76046301722a3c  opt/ros/kinetic/share/cartographer_rviz/rviz_plugin_description.xml
+f28deae5027821ddcd43cbd0ba184d0c  usr/share/doc/ros-kinetic-cartographer-rviz/changelog.Debian.gz

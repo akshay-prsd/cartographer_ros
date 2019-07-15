@@ -1,0 +1,3 @@
+shlibs:Depends=libboost-iostreams1.58.0, libboost-system1.58.0, libc6 (>= 2.17), libcairo2 (>= 1.6.0), libceres1, libconsole-bridge0.2v5, libgcc1 (>= 1:3.0), libgflags2v5, libgoogle-glog0v5, liblua5.2-0, libpcl-common1.7, libstdc++6 (>= 5.2), liburdfdom-world0.4
+misc:Depends=
+misc:Pre-Depends=

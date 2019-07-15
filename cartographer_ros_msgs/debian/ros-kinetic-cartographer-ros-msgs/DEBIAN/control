@@ -1,0 +1,10 @@
+Package: ros-kinetic-cartographer-ros-msgs
+Version: 1.0.0-0xenial
+Architecture: amd64
+Maintainer: The Cartographer Authors <cartographer-owners@googlegroups.com>
+Installed-Size: 1322
+Depends: ros-kinetic-geometry-msgs, ros-kinetic-message-runtime, ros-kinetic-std-msgs
+Section: misc
+Priority: extra
+Homepage: https://github.com/googlecartographer/cartographer_ros
+Description: ROS messages for the cartographer_ros package.

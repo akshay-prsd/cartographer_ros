@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil/absl/container/internal/test_instance_tracker.cc
+absl/container/internal/test_instance_tracker.h
+/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil/absl/container/internal/absl/container/internal/test_instance_tracker.h
+
+/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil/absl/container/internal/test_instance_tracker.h
+cstdlib
+-
+ostream
+-
+

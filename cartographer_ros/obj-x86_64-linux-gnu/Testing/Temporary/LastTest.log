@@ -1,0 +1,83 @@
+Start testing: Jul 15 19:53 UTC
+----------------------------------------------------------
+1/4 Testing: _ctest_cartographer_ros_gtest_metrics_test
+1/4 Test: _ctest_cartographer_ros_gtest_metrics_test
+Command: "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/catkin_generated/env_cached.sh" "/usr/bin/python" "/opt/ros/kinetic/share/catkin/cmake/test/run_tests.py" "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-metrics_test.xml" "--return-code" "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/metrics_test --gtest_output=xml:/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-metrics_test.xml"
+Directory: /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu
+"_ctest_cartographer_ros_gtest_metrics_test" start time: Jul 15 19:53 UTC
+Output:
+----------------------------------------------------------
+/bin/sh: 1: /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/metrics_test: not found
+Cannot find results, writing failure results to '/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/MISSING-gtest-metrics_test.xml'
+-- run_tests.py: execute commands
+  /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/metrics_test --gtest_output=xml:/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-metrics_test.xml
+-- run_tests.py: verify result "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-metrics_test.xml"
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"_ctest_cartographer_ros_gtest_metrics_test" end time: Jul 15 19:53 UTC
+"_ctest_cartographer_ros_gtest_metrics_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: _ctest_cartographer_ros_gtest_configuration_files_test
+2/4 Test: _ctest_cartographer_ros_gtest_configuration_files_test
+Command: "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/catkin_generated/env_cached.sh" "/usr/bin/python" "/opt/ros/kinetic/share/catkin/cmake/test/run_tests.py" "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-configuration_files_test.xml" "--return-code" "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/configuration_files_test --gtest_output=xml:/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-configuration_files_test.xml"
+Directory: /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu
+"_ctest_cartographer_ros_gtest_configuration_files_test" start time: Jul 15 19:53 UTC
+Output:
+----------------------------------------------------------
+/bin/sh: 1: /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/configuration_files_test: not found
+Cannot find results, writing failure results to '/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/MISSING-gtest-configuration_files_test.xml'
+-- run_tests.py: execute commands
+  /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/configuration_files_test --gtest_output=xml:/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-configuration_files_test.xml
+-- run_tests.py: verify result "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-configuration_files_test.xml"
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"_ctest_cartographer_ros_gtest_configuration_files_test" end time: Jul 15 19:53 UTC
+"_ctest_cartographer_ros_gtest_configuration_files_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: _ctest_cartographer_ros_gtest_msg_conversion_test
+3/4 Test: _ctest_cartographer_ros_gtest_msg_conversion_test
+Command: "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/catkin_generated/env_cached.sh" "/usr/bin/python" "/opt/ros/kinetic/share/catkin/cmake/test/run_tests.py" "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-msg_conversion_test.xml" "--return-code" "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/msg_conversion_test --gtest_output=xml:/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-msg_conversion_test.xml"
+Directory: /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu
+"_ctest_cartographer_ros_gtest_msg_conversion_test" start time: Jul 15 19:53 UTC
+Output:
+----------------------------------------------------------
+/bin/sh: 1: /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/msg_conversion_test: not found
+Cannot find results, writing failure results to '/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/MISSING-gtest-msg_conversion_test.xml'
+-- run_tests.py: execute commands
+  /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/msg_conversion_test --gtest_output=xml:/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-msg_conversion_test.xml
+-- run_tests.py: verify result "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-msg_conversion_test.xml"
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"_ctest_cartographer_ros_gtest_msg_conversion_test" end time: Jul 15 19:53 UTC
+"_ctest_cartographer_ros_gtest_msg_conversion_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: _ctest_cartographer_ros_gtest_time_conversion_test
+4/4 Test: _ctest_cartographer_ros_gtest_time_conversion_test
+Command: "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/catkin_generated/env_cached.sh" "/usr/bin/python" "/opt/ros/kinetic/share/catkin/cmake/test/run_tests.py" "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-time_conversion_test.xml" "--return-code" "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/time_conversion_test --gtest_output=xml:/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-time_conversion_test.xml"
+Directory: /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu
+"_ctest_cartographer_ros_gtest_time_conversion_test" start time: Jul 15 19:53 UTC
+Output:
+----------------------------------------------------------
+/bin/sh: 1: /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/time_conversion_test: not found
+Cannot find results, writing failure results to '/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/MISSING-gtest-time_conversion_test.xml'
+-- run_tests.py: execute commands
+  /home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/devel/lib/cartographer_ros/time_conversion_test --gtest_output=xml:/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-time_conversion_test.xml
+-- run_tests.py: verify result "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/test_results/cartographer_ros/gtest-time_conversion_test.xml"
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"_ctest_cartographer_ros_gtest_time_conversion_test" end time: Jul 15 19:53 UTC
+"_ctest_cartographer_ros_gtest_time_conversion_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 15 19:53 UTC

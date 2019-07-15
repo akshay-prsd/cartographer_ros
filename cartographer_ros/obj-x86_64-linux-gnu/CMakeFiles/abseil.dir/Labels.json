@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/CMakeFiles/abseil"
+		},
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/CMakeFiles/abseil.rule"
+		},
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/CMakeFiles/abseil-complete.rule"
+		},
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil-stamp/abseil-install.rule"
+		},
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil-stamp/abseil-mkdir.rule"
+		},
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil-stamp/abseil-download.rule"
+		},
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil-stamp/abseil-update.rule"
+		},
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil-stamp/abseil-patch.rule"
+		},
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil-stamp/abseil-configure.rule"
+		},
+		{
+			"file" : "/home/akshay/src/cartographer_ros/cartographer_ros/obj-x86_64-linux-gnu/abseil/src/abseil-stamp/abseil-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"abseil"
+		],
+		"name" : "abseil"
+	}
+}
