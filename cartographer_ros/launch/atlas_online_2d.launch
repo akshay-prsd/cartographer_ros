@@ -19,10 +19,11 @@
   <param name="robot_description"
     textfile="$(find cartographer_ros)/urdf/atlas.urdf" />
    <!-- Publish static joints to tf -->
-   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-
-   <node name="rviz" pkg="rviz" type="rviz" required="true"
+   <!--node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" -->
+   <remap from="/map" to="/map_cartographer"/>
+   <node name="rviz" pkg="rviz" type="rviz" required="false"
        args="-d $(find cartographer_ros)/configuration_files/demo_2d.rviz" />
+
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
       -configuration_directory $(arg config_folder)
