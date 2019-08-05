@@ -20,7 +20,7 @@ options = {
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
   tracking_frame = "base_link",
-  published_frame = "base_link",
+  published_frame = "odom",
   odom_frame = "odom",
   provide_odom_frame = false,
   publish_frame_projected_to_2d = false,
@@ -43,30 +43,31 @@ options = {
 }
 
 MAP_BUILDER.use_trajectory_builder_2d = true
-MAP_BUILDER.num_background_threads = 4
+MAP_BUILDER.num_background_threads = 8
 
-TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = false
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 90
+TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
+TRAJECTORY_BUILDER_2D.submaps.num_range_data = 100
 TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.05
 TRAJECTORY_BUILDER_2D.use_imu_data = false
-TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.075
-TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_range = 30
-TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 5.0
+-- TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.075
+-- TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_range = 30
+-- TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 5.0
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.occupied_space_weight = 5.
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 3e2
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 1e2
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 1e1
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 5
 TRAJECTORY_BUILDER_2D.min_range = 0.
-TRAJECTORY_BUILDER_2D.max_range = 30.
-
-POSE_GRAPH.optimize_every_n_nodes = 100
+TRAJECTORY_BUILDER_2D.max_range = 20.
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+POSE_GRAPH.optimize_every_n_nodes = 90
 POSE_GRAPH.global_constraint_search_after_n_seconds = 10
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 2
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 2.
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.2
 POSE_GRAPH.constraint_builder.min_score = 0.52
-POSE_GRAPH.optimization_problem.huber_scale = 2e1
+POSE_GRAPH.optimization_problem.huber_scale = 1e1
 POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 2e3
 POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 2e3
-POSE_GRAPH.optimization_problem.odometry_translation_weight = 1e1
+POSE_GRAPH.optimization_problem.odometry_translation_weight = 1e3
 POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1e1
 
 return options

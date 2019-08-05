@@ -15,13 +15,7 @@
 -->
 
 <launch>
-  <param name="/use_sim_time" value="false" />
-  <param name="robot_description"
-    textfile="$(find cartographer_ros)/urdf/atlas.urdf" />
-   <!-- Publish static joints to tf -->
-   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
-   <!-- remap from="/map" to="/map_cartographer" -->
-
+  <param name="use_sim_time" value="true" />
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
       -configuration_directory $(arg config_folder)

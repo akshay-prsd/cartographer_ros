@@ -17,7 +17,7 @@ include "trajectory_builder.lua"
 
 options = {
   map_builder = MAP_BUILDER,
-  trajectory_builder = TRAJECTORY_BUILDER,
+  trajectory_builder = imu,
   map_frame = "map",
   tracking_frame = "base_link",
   published_frame = "base_link",
